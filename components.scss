@@ -1,0 +1,31 @@
+@import "./components/vars";
+@import "./components/mixin";
+
+@import "./components/typography";
+@import "./components/button";
+@import "./components/background";
+@import "./components/animbanner";
+
+body {
+	background: $body-bg;
+}
+
+pre {
+	margin: 0;
+	margin-bottom: 12px;
+	background: #ddd;
+	display: inline;
+	padding: 3px;
+	line-height: 1;
+	border-radius: 5px;
+}
+
+.bg-box {
+	height: 100px;
+	width: 150px;
+	padding: 40px 10px;
+	box-sizing: border-box;
+	text-align: center;
+	border-radius: 10px;
+	box-shadow: 1px 1px 13px #00000040;
+}

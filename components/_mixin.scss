@@ -1,0 +1,28 @@
+@mixin device-up($device) {
+	@if map-has-key($devices, $device) {
+		@media (min-width: map-get($devices, $device)) {
+			@content;
+		}
+	}
+}
+
+@mixin device-down($device) {
+	@if map-has-key($devices, $device) {
+		@media (max-width: map-get($devices, $device)) {
+			@content;
+		}
+	}
+}
+
+@mixin device-between($device1, $device2) {
+	@if map-has-key($devices, $device1) and map-has-key($devices, $device2) {
+		@media (min-width: map-get($devices, $device1)) and (max-width: map-get($devices, $device2)) {
+			@content;
+		}
+	}
+}
+
+@mixin reset-heading {
+	margin: 0;
+	padding: 0;
+}

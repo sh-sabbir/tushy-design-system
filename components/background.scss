@@ -1,0 +1,29 @@
+.bg {
+	&-blue {
+		background-color: $blue;
+	}
+	&-blue-alt {
+		background-color: $blue-alt;
+	}
+	&-blue-dark {
+		background-color: $blue-dark;
+	}
+	&-orange {
+		background-color: $orange;
+	}
+	&-orange-alt {
+		background-color: $orange-alt;
+	}
+	&-neutral {
+		background-color: $neutral;
+	}
+	&-neutral-alt {
+		background-color: $neutral-alt;
+	}
+	&-black {
+		background-color: $black;
+	}
+	&-white {
+		background-color: $white;
+	}
+}

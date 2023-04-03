@@ -1,0 +1,124 @@
+@mixin btn-primary {
+	background: $blue-alt;
+	color: $black;
+	font-weight: 500;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: 200px;
+    box-sizing: border-box;
+}
+
+@mixin btn-primary-pseudo {
+	&:hover {
+		background: $blue-dark;
+		text-decoration: none;
+		color: $black;
+	}
+
+	&:active {
+		background: $blue;
+		text-decoration: none;
+		color: $black;
+	}
+}
+
+@mixin btn-secondary {
+	background: $white;
+	border-color: $blue;
+	color: $black;
+	font-weight: 500;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: 200px;
+	border-style: solid;
+    box-sizing: border-box;
+}
+
+@mixin btn-secondary-pseudo {
+	&:hover {
+		background: $blue;
+		text-decoration: none;
+		color: $black;
+	}
+
+	&:active {
+		background: $blue;
+		text-decoration: none;
+		color: $black;
+	}
+}
+
+.btn {
+	&-primary {
+		&-sm {
+			@include btn-primary();
+			padding: 9px 20px;
+			font-size: 12px;
+			line-height: 14px;
+
+			@include btn-primary-pseudo();
+		}
+		&-md {
+			@include btn-primary();
+			padding: 9px 20px;
+			font-size: 16px;
+			line-height: 18px;
+
+			@include btn-primary-pseudo();
+		}
+		&-lg {
+			@include btn-primary();
+			padding: 15px 36px;
+			font-size: 18px;
+			line-height: 21px;
+
+			@include btn-primary-pseudo();
+		}
+	}
+
+	&-secondary {
+		&-sm {
+			@include btn-secondary();
+			padding: 9px 20px;
+			font-size: 12px;
+			line-height: 14px;
+			border-width: 1.5px;
+
+			@include btn-secondary-pseudo();
+		}
+		&-md {
+			@include btn-secondary();
+			padding: 9px 20px;
+			font-size: 16px;
+			line-height: 18px;
+			border-width: 1.5px;
+
+			@include btn-secondary-pseudo();
+		}
+		&-lg {
+			@include btn-secondary();
+			padding: 15px 36px;
+			font-size: 18px;
+			line-height: 21px;
+			border-width: 1.5px;
+
+			@include btn-secondary-pseudo();
+		}
+	}
+	&-price {
+		display: flex;
+		width: fit-content;
+		align-items: center;
+		justify-content: space-between;
+        gap: 20px;
+
+		.price {
+			&-old {
+				padding-left: 5px;
+				text-decoration: line-through;
+			}
+		}
+	}
+}

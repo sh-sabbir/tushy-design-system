@@ -1,0 +1,7 @@
+import "./components.scss";
+
+import { Marquee } from "./js/Marquee";
+
+window.addEventListener("load", () => {
+	Marquee(".tushy-anim-banner", 0.2);
+});
